@@ -70,58 +70,59 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.yellow,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.yellow,
+      // ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: Colors.blue,
+        //415298	65	82	152
+        color: Color.fromARGB(255, 65, 82, 152),
         child: Column(
           children: [
             SizedBox(
               width: double.infinity,
-              height: 300,
+              height: 250,
               child: Stack(
                 children: [
                   Positioned(
-                    left: -50,
-                    top: - 100,
+                    left: -15,
+                    top: -10,
                     child: SizedBox(
-                      width: 250,
-                      height: 300,
-                      child: Image.network("https://images.unsplash.com/photo-1534712980252-f433e30fa90b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zmx1aWQlMjBkeW5hbWljc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+                      width: 300,
+                      height: 250,
+                      child: Image.asset("images/topBottom.png",
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
                   Positioned(
-                    left: -150,
-                    top: -200,
+                    left: -20,
+                    top: -60,
                     child: SizedBox(
                       width: 250,
-                      height: 300,
-                      child: Image.network("https://www.thoughtco.com/thmb/VUtMubUhtZ9-FODTLsYg4INofI8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-157168910-56fc04a05f9b5829868eb9e2.jpg",
+                      height: 250,
+                      child: Image.asset("images/topTop.png",
                       fit: BoxFit.fill
                       ),
                     ),
                   ),
-                  Positioned(
-                      top: 0,
-                      right: 0,
-                      child: SizedBox(
-                          width: 100,
-                          height: 100,
-                          child: Image.network("https://readcivil.com/wp-content/uploads/2017/10/fluid-hysitron-inc.jpg",
-                          fit: BoxFit.cover,
-                          ),
-                      ),
-                  )
+                  // Positioned(
+                  //     top: 0,
+                  //     right: 0,
+                  //     child: SizedBox(
+                  //         width: 100,
+                  //         height: 100,
+                  //         child: Image.network("https://readcivil.com/wp-content/uploads/2017/10/fluid-hysitron-inc.jpg",
+                  //         fit: BoxFit.cover,
+                  //         ),
+                  //     ),
+                  // )
                 ],
               ),
             ),
             SizedBox(
-              height: 250,
+              height: 350,
               width: double.infinity,
               child: Column(
                 children: [
@@ -131,25 +132,32 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontSize: 40
                     )
                   ),
+                  SizedBox(
+                    width: 300,
+                    height: 10,
+                  ),
                   Container(
-                    height: 50,
+                    height: 40,
                     width: 300,
                     decoration:  BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
                         color: Colors.white
                     ),
                     child: TextField(
-
                       decoration: InputDecoration(
                         hintStyle: TextStyle(
-                          
+
                           color: Colors.black
                         )
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 300,
+                    height: 10,
+                  ),
                   Container(
-                    height: 50,
+                    height: 40,
                     width: 300,
                     decoration:  BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
@@ -157,6 +165,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     child: TextField(
                     ),
+                  ),
+                  SizedBox(
+                    width: 300,
+                    height: 20,
                   ),
                   Container(
                     height: 50,
@@ -166,12 +178,29 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.green
                     ),
                     child: FlatButton(onPressed: (){},
-                        child: Text(
+                        child: const Text(
                       "LOGIN",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25
+                          ),
                     )),
                   ),
-                  Text("Forgot Password?"),
-                  Text("Register Here")
+                  SizedBox(
+                    width: 300,
+                    height: 20,
+                  ),
+                  Text("Forgot Password?",
+                    style: TextStyle(
+                      color: Colors.white
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 10)),
+                  Text("Register Here",
+                    style: TextStyle(
+                      color: Colors.white
+                    ),
+                  )
                 ],
               ),
             ),
@@ -179,23 +208,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Stack(
                   children:[
                     Positioned(
-                      left: 0,
-                      bottom: 0,
+                      left: -15,
+                      bottom: -10,
                       child: SizedBox(
                         width: 150,
                         // height: 300,
-                        child: Image.network("https://images.unsplash.com/photo-1534712980252-f433e30fa90b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zmx1aWQlMjBkeW5hbWljc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+                        child: Image.asset("images/actualBottomLeft.png",
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
                     Positioned(
-                      right: 0,
-                      bottom: 0,
+                      right: -15,
+                      bottom: -200,
                       child: SizedBox(
-                        width: 100,
-                        // height: 300,
-                        child: Image.network("https://www.thoughtco.com/thmb/VUtMubUhtZ9-FODTLsYg4INofI8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-157168910-56fc04a05f9b5829868eb9e2.jpg",
+                        // width: 100,
+                        height: 300,
+                        child: Image.asset("images/bottomLeft.png",
                             fit: BoxFit.fill
                         ),
                       ),
